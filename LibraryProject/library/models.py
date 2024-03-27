@@ -4,6 +4,9 @@ from django.db import models
 class Genre(models.Model):
     genre = models.CharField(max_length=100, unique=True)
 
+    def __str__(self) -> str:
+        return self.genre
+
 
 class Book(models.Model):
     title = models.CharField(max_length=100)
