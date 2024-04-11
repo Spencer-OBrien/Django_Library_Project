@@ -7,7 +7,7 @@ from .serializers import BookSerializer, GenreSerializer
 
 def all_books(request):
     books = Book.objects.all()
-    return render(request, 'all_books.html', {'books': books})
+    return render(request, "all_books.html", {"books": books})
 
 
 class AddBook(generics.ListCreateAPIView):
